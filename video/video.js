@@ -20,15 +20,15 @@ const loaddisplayvideo = (videos) =>{
     card.innerHTML=`
       <figure>
     <img
-      src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+      src=${video.thumbnail}
+      class="h-full w-full object-cover"
       alt="Shoes" />
   </figure>
-  <div class="card-body">
-    <h2 class="card-title">Shoes!</h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
-    <div class="card-actions justify-end">
-      <button class="btn btn-primary">Buy Now</button>
-    </div>
+  <div class="py-2 px-0 flex gap-2">
+  <div>
+        <img class="w-10 h-10 rounded-full object-cover" src=${video.authors[0].profile_picture}/>
+  </div>
+    
   </div>
     `;
     videocontainer.append(card)
